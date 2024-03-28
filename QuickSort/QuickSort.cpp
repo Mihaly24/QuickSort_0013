@@ -30,6 +30,8 @@ void input() {
     }
 }
 
+void swap(int x, int y)
+
 int main()
 {
     
