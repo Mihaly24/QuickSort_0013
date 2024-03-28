@@ -39,7 +39,7 @@ void swap(int x, int y)
 
 }
 
-void q_short(int low, int high)
+void q_sort(int low, int high)
 {
     int temp;
     int pivot, i, j;
@@ -77,8 +77,8 @@ void q_short(int low, int high)
         swap(low, j);
     }
 
-    q_short(low, j - 1);
-    q_short(j + 1, high);
+    q_sort(low, j - 1);
+    q_sort(j + 1, high);
 }
 
 void display()
@@ -102,7 +102,7 @@ int main()
 
     do {
         input();
-        q_short(0, n - 1);
+        q_sort(0, n - 1);
         display();
         cout << "\n\nDo you want to continue? (y/n): ";
         cin >> ch;
